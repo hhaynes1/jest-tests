@@ -3,6 +3,7 @@ const capitalize = myTests.capitalize;
 const reverseString = myTests.reverseString;
 const calculator = myTests.calculator;
 const caesarCipher = myTests.caesarCipher;
+const analyzeArray = myTests.analyzeArray;
 
 test('string with first character capitalized', () => {
     expect(capitalize('dogs')).toBe('Dogs');
@@ -31,6 +32,6 @@ test('string caesar ciphered', () => {
     expect(caesarCipher('za', -100)).toBe('DE');
 })
 
-// test('return object with avg/min/max/length of array', () => {
-//     expect().tobe();
-// })
+test('return object with avg/min/max/length of array', () => {
+    expect(JSON.stringify(analyzeArray([1, 8, 3, 4, 2, 6]))).toBe('{"average":4,"min":1,"max":8,"length":6}');
+})

@@ -43,13 +43,21 @@ function caesarCipher(string, key, cipher = null) {
         .join('');
 }
 
-// function analyzeArray() {
-
-// }
+function analyzeArray(array) {
+    let newArray = {};
+    newArray['average'] = array.reduce((acc, cur) => {
+        return acc + cur;
+    }, 0) / array.length;
+    newArray['min'] = Math.min(...array);
+    newArray['max'] = Math.max(...array);
+    newArray['length'] = array.length;
+    return newArray;
+}
 
 module.exports = {
     capitalize,
     reverseString,
     calculator,
     caesarCipher,
+    analyzeArray,
 };
